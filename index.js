@@ -8,31 +8,19 @@ class Cliente{
         this.fechaPago= fechaPago;
 }};
 
-class membresias{
-    constructor(membresia,cliente,precio,precioRecargo){
-        this.membresia=membresia;
-        this.cliente=cliente;
-        this.precio=precio;
-        this.precioRecargo=precioRecargo;
-}};
 
-let PrimerCliente=new Cliente("Tomas",42589706,"free", 
+let PrimerCliente=new Cliente(prompt("Ingrese su nombre completo"),
+    parseInt(prompt("Ingrese su dni")),
+    prompt("Ingrese su tipo de membresia (Musculacion-Crossfit-Funcional)").toLowerCase(),
     new Date(prompt("Ingrese año de ultimo pago"),
     prompt("Ingrese mes de ultimo pago")-1,
     prompt("Ingrese dia de ultimo pago")));
     // prompt("Ingrese su nombre completo"),
     // parseInt(prompt("Ingrese su dni")),
-    // prompt("Ingrese su tipo de membresia"),
+    // prompt("Ingrese su tipo de membresia (Musculacion-CrossFit-Funcional)"),
     // prompt("Ingrese su ultima fecha de pago"),);
 
-const MEM_MUSCULACION=new membresias("Musculacion",PrimerCliente, 12000, (12000+(12000*0.1)));
-const MEM_CROSSFIT=new membresias("CrossFit",PrimerCliente, 13500, (13500+(13500*0.1)));
-const MEM_FUNCIONAL=new membresias("Funcional",PrimerCliente, 9000, (9000+(9000*0.1)));
-
-
-//CONTASNTES Y VARIABLES
-// const VALOR_CUOTA = 12000;
-// const VALOR_RECARGO= (VALOR_CUOTA+(VALOR_CUOTA*0.1));
+//CONSTANTES Y VARIABLES
 let controlNoPago;
 let valor;
 
@@ -50,9 +38,9 @@ function ControlDePago(Cliente){
 };
 
 function Membresia(cliente){
-    if(cliente.membresia=="Musculacion"){
+    if(cliente.membresia=="musculacion"){
         return 12000;}
-    else if(cliente.membresia=="CrossFit"){
+    else if(cliente.membresia=="crossfit"){
         return 13500;}
         else{
             return 9000;
