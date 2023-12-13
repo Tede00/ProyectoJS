@@ -27,17 +27,21 @@
                 <button>Enviar</button>
             </FIeldset>
         </form>
+        <h1>TIENDA</h1>
         <section>
-            <h1>TIENDA</h1>
-            <div id="ProductosTienda"></div>
+            <h2>PRODUCTOS</h2>
+            <div id="productos"></div>
+        </section>
+        <section>
             <h2>CARRITO</h2>
             <div id="carrito">
-                <h2>Producto agregados</h2>
-                <ul id="ProductosCarrito"></ul>
-                <p>Total: <span id="total">0</span></p>
-                <button onclick="vaciarCarrito()">Vaciar</button>
-            </div>
+                <h3>Lista de productos</h3>
+                <ul id="listaProductos"></ul>
+                <p>Total: $<span id="total">0</span></p>
+                <button onclick="vaciarCarrito()">Vaciar el carrito</button>
+        </div>
         </section>
+
     </main>
     <script src="./js/index.js"></script>
 </body>

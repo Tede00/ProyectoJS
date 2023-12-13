@@ -3,3 +3,36 @@
     align-items: center;
     flex-direction: column;
 }
+
+.producto{
+    display: flex;
+    flex-direction: column; /* Puedes cambiar esto según tus necesidades */
+    align-items: center; /* Alinea los elementos hijos al centro */
+    border: 1px solid #ccc; /* Añade un borde para mayor claridad */
+    padding: 10px; /* Añade espaciado interno */
+    margin: 10px;
+}
+.producto img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al contenedor */
+    margin-bottom: 10px; /* Añade espacio inferior a la imagen */
+}
+
+#carrito{
+    display: flex;
+    flex-direction: column; /* Puedes cambiar esto según tus necesidades */
+    align-items: center; /* Alinea los elementos hijos al centro */
+    border: 1px solid #ccc; /* Añade un borde para mayor claridad */
+    padding: 10px; /* Añade espaciado interno */
+    margin: 10px;
+}
+
+h2{
+    display: flex;
+    flex-direction: column; /* Puedes cambiar esto según tus necesidades */
+    align-items: center; 
+}
+h1{
+    display: flex;
+    flex-direction: column; /* Puedes cambiar esto según tus necesidades */
+    align-items: center; 
+}
