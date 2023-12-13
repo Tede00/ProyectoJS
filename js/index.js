@@ -72,9 +72,9 @@ function AvisoDePago(ControlNoPago,cliente,valor){
 
 
 const productos = [
-    {id:1, nombre:"Proteina",imagen:"../assets/img/1.webp", precio:13000},
-    {id:2, nombre:"Creatina",imagen:"../assets/img/2.jpg", precio:10000},
-    {id:3, nombre:"Pre-entreno",imagen:"../assets/img/3.jpeg", precio:9000},
+    {id:1, nombre:"Proteina",imagen:"./assets/img/1.webp", precio:13000},
+    {id:2, nombre:"Creatina",imagen:"./assets/img/2.jpg", precio:10000},
+    {id:3, nombre:"Pre-entreno",imagen:"./assets/img/3.jpeg", precio:9000},
 ];
 
 
