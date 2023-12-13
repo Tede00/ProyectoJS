@@ -7,7 +7,38 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
-    <script src="./index.js"></script>
+    <header>
+
+    </header>
+    <main>
+        <!-- FORMULARIO-->
+        <form id="Formulario">
+            <FIeldset id="Fieldset" >
+                <legend>DATOS PERSONALES</legend>
+
+                <label for="nombre">Nombre y Apeliido</label>
+                <input type="text" id="nombre">
+                <label for="dni">DNI</label>
+                <input type="number" id="dni">
+                <label for="membresia">Tipo de membresia (Musculacion-Crossfit-Funcional)</label>
+                <input type="text" id="membresia">
+                <label for="fecha">Fecha de ultimo pago</label>
+                <input type="date" id="fecha">
+                <button>Enviar</button>
+            </FIeldset>
+        </form>
+        <section>
+            <h1>TIENDA</h1>
+            <div id="ProductosTienda"></div>
+            <h2>CARRITO</h2>
+            <div id="carrito">
+                <h2>Producto agregados</h2>
+                <ul id="ProductosCarrito"></ul>
+                <p>Total: <span id="total">0</span></p>
+                <button onclick="vaciarCarrito()">Vaciar</button>
+            </div>
+        </section>
+    </main>
+    <script src="./js/index.js"></script>
 </body>
 </html>

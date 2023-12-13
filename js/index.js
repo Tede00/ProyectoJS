@@ -8,17 +8,26 @@ class Cliente{
         this.fechaPago= fechaPago;
 }};
 
+const ARRAY_CLIENTE=[];
+let cliente;
 
-let PrimerCliente=new Cliente(prompt("Ingrese su nombre completo"),
-    parseInt(prompt("Ingrese su dni")),
-    prompt("Ingrese su tipo de membresia (Musculacion-Crossfit-Funcional)").toLowerCase(),
-    new Date(prompt("Ingrese año de ultimo pago"),
-    prompt("Ingrese mes de ultimo pago")-1,
-    prompt("Ingrese dia de ultimo pago")));
-    // prompt("Ingrese su nombre completo"),
-    // parseInt(prompt("Ingrese su dni")),
-    // prompt("Ingrese su tipo de membresia (Musculacion-CrossFit-Funcional)"),
-    // prompt("Ingrese su ultima fecha de pago"),);
+
+const Formulario= document.getElementById("Formulario");
+Formulario.addEventListener("submit",(e)=>{
+    e.preventDefault();
+
+    const nombre=document.getElementById("nombre");
+    const dni=document.getElementById("dni");
+    const membresia=document.getElementById("membresia");
+    const fecha=document.getElementById("fecha")
+
+    cliente=new Cliente(nombre.value,parseInt(dni.value),(membresia.value).toLowerCase(), new Date(fecha.value), )
+    ARRAY_CLIENTE.push(cliente);
+
+    Formulario.reset();
+
+});
+
 
 //CONSTANTES Y VARIABLES
 let controlNoPago;
@@ -58,8 +67,8 @@ function AvisoDePago(ControlNoPago,cliente,valor){
     }};
     
 
-controlNoPago= ControlDePago(PrimerCliente.fechaPago);
+controlNoPago= ControlDePago(cliente.fechaPago);
 
-valor= Membresia(PrimerCliente);
+valor= Membresia(cliente);
 
-AvisoDePago(controlNoPago, PrimerCliente,valor);
+AvisoDePago(controlNoPago, cliente,valor);
